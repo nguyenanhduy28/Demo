@@ -12,6 +12,7 @@ public class InfoController {
         String ten = "Nguyen Anh Duy";
         String mssv = "2280600458";
         String nhom = "Nhóm 3";
+        String chu = "Hello world";
 
         return "Tên: " + ten +
                "<br>MSSV: " + mssv +
