@@ -1,0 +1,19 @@
+name: Deploy to ithutech
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: trigger deploy
+        run: |
+          curl -X POST ${{ secrets.DEPLOY_URL }} \
+          -H "Content-Type: application/json" \
+          -d '{"image":"anhduy28/myapp","slot":4}'
